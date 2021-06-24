@@ -1,7 +1,9 @@
 pipeline{	
 	agent any
 	
-	/*triggers{pollSCM('* * * * *')}*/
+	/*
+	triggers{pollSCM('* * * * *')}
+	*/
 	options{
 	timestamps()
 	buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '7'))}
